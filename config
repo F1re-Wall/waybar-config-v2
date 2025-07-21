@@ -1,0 +1,85 @@
+[
+  {
+    "layer": "top",
+    "margin":"3px 20px",
+    "position": "top",
+    "height":20,
+    "spacing": 5,
+    "modules-left": [
+      "custom/arch",
+      "custom/spacer",
+      "cpu",
+      "temperature",
+      "custom/group-cpu-temp"
+    ],
+    "modules-center": [
+      "hyprland/workspaces"
+    ],
+    "modules-right": [
+      "network",
+      "pulseaudio",
+      "clock"
+    ],
+    "hyprland/workspaces": {
+      "format": "{name}",
+      "persistent-workspaces":{
+          "*": 7
+      },
+      "on-click":"active"
+    },
+
+    "custom/group-cpu-temp":{
+      "format":"{}",
+      "exec":"echo",
+      "return-type":"json"
+    },
+
+    "custom/arch": {
+      "format": "",
+      "on-click": "~/.config/waybar/scripts/use_arch.sh",
+      "tooltip": false
+    },
+    "clock": {
+      "tooltip":false,
+      "format":"  {:%H:%M %p}",
+      "on-click":"~/.config/waybar/scripts/calendar.sh"
+    },
+    "cpu": {
+      "format":" {usage}%",
+      "critical-threshold":80
+    },
+    "memory": {
+      "format": " {}%"
+    },
+    "temperature": {
+      "thermal-zone": 0,
+      "hwmon-path": "/sys/class/thermal/thermal_zone0/temp",
+      "format-critical": "{icon} {temperatureC}°C",
+      "format": "{icon} {temperatureC}°C",
+      "critical-threshold": 80,
+      "interval":5,
+      "format-icons": [
+        ""
+      ]
+    },
+    "network": {
+      "format-wifi": "",
+      "format-ethernet": " {ifname}",
+      "tooltip-format": "{ifname} via {ipaddr}",
+      "format-linked": "  {ifname}",
+      "format-disconnected": "",
+      "format-alt": " {ifname}:{ipaddr}"
+    },
+    "pulseaudio": {
+      "format": "{icon}\u2009{volume:3}%",
+      "format-icons": {
+        "default": [
+          "🔊"
+        ]
+      },
+      "on-click": "pavucontrol",
+      "on-click-right": "foot -a pw-top pw-top"
+    }
+  }
+]
+

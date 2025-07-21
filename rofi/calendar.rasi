@@ -1,0 +1,27 @@
+*{
+    font: "JetBrainsMono Nerd Font 11";
+    background-color:#2e3e44;
+    color:#d3dce2;
+}
+
+window{
+    border: 2px;
+    border-color: gray;
+    border-radius:5px;
+    location: north east;
+    x-offset: 60px;
+    y-offset: 10px;
+    width: 220px;
+    height:210px;
+    padding:15px 0 0 15px;
+    margin: 0 70px 0 0;
+}
+
+
+listview{
+    lines:10;
+    spacing:5px;
+}
+inputbar{
+    enabled: false;
+}
