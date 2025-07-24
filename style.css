@@ -39,6 +39,7 @@ window#waybar{
 
 #clock,
 #network,
+#battery,
 #pulseaudio
 {
   font-size: 12px;
@@ -49,6 +50,14 @@ window#waybar{
   border-radius: 7px;
   box-shadow:0 5px 0 0 #23262d;
   padding: 0 8px;
+}
+
+#battery.warning{
+  color: #bfa96d;
+}
+
+#battery.critical{
+  color: #c78186;
 }
 
 #clock:hover{
