@@ -1,4 +1,5 @@
-![Config-visual](config-visual/config.png)
+![Config-visual](config-visual/config_standart.png)
+![Config-visual-powered](config-visual/config_powered.png)
 
 this config use next fonts: JetBrains Mono, JetBrains Mono Bold,
 Symbols Nerd Font, Font Awesome.
